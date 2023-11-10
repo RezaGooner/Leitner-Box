@@ -61,7 +61,6 @@ void pass(Card*& card) {
 	if (card -> day -> num != 30){
 	    Card* pastCardPastDay = card->day->head;
 	    if (pastCardPastDay == card) {
-	        // Card is at the beginning of the day
 	        card->day->head = card->next;
 	    } else {
 	        while (pastCardPastDay->next != card) {
@@ -212,7 +211,6 @@ void info(){
 
 int main() {
 	
-	// Generate 30 day's of month
 	Day* pastDay = createDay(1);
 	Day* day1 = pastDay ;
     Day* newDay = NULL ;
@@ -227,7 +225,7 @@ int main() {
 		char menu ;
 		cout << endl << "Enter command : " ;
 		cin >> menu ;
-		cin.ignore(); // ?????? ???? ?? ?? ????
+		cin.ignore(); 
 		cout << endl ;
 
 		if (menu == 'e'){
